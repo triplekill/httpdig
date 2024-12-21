@@ -1,0 +1,14 @@
+[Unit]
+Description=HTTP DNS Dig Service
+After=network.target
+
+[Service]
+Type=simple
+User=httpdig
+WorkingDirectory=/root
+ExecStart=/root/httpdig
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
